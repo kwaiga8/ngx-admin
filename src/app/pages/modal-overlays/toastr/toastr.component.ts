@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { ToasterConfig } from 'angular2-toaster';
+
+import 'style-loader!angular2-toaster/toaster.css';
 import {
   NbComponentStatus,
   NbGlobalLogicalPosition,
   NbGlobalPhysicalPosition,
   NbGlobalPosition,
   NbToastrService,
-  NbToastrConfig,
 } from '@nebular/theme';
 
 @Component({
@@ -16,7 +18,7 @@ import {
 export class ToastrComponent {
   constructor(private toastrService: NbToastrService) {}
 
-  config: NbToastrConfig;
+  config: ToasterConfig;
 
   index = 1;
   destroyByClick = true;

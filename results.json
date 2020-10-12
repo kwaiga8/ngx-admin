@@ -1,0 +1,67 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Feature NAme",
+    "line": 1,
+    "id": "feature-name",
+    "tags": [],
+    "uri": "e2e\\src\\features\\hello.feature",
+    "elements": [
+      {
+        "id": "feature-name;meeting",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Meeting",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\cucumber-tsflow\\src\\binding-decorator.ts:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I say hello",
+            "match": {
+              "location": "node_modules\\cucumber-tsflow\\src\\binding-decorator.ts:201"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\cucumber-tsflow\\src\\binding-decorator.ts:90"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

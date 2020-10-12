@@ -6,7 +6,7 @@ const { SpecReporter } = require('jasmine-spec-reporter');
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
-    './e2e/**/*.e2e-spec.ts'
+    'e2e/src/features/*.feature',
   ],
   capabilities: {
     'browserName': 'chrome',
@@ -15,18 +15,25 @@ exports.config = {
     }
   },
   directConnect: true,
-  baseUrl: 'http://localhost:4200/',
-  framework: 'jasmine',
-  jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 30000,
-    print: function() {}
+  baseUrl: 'http://localhost:4300/',
+  framework: 'custom',
+  frameworkPath: require.resolve('protractor-cucumber-framework'),
+  ignoreUncaughtExceptions: true,
+  SELENIUM_PROMISE_MANAGER: false,
+  cucumberOpts: {
+    tags: [
+      'not @disabled',
+    ],
+    require: [
+      'e2e/src/page_objects/*/*.ts',
+      'e2e/src/step_definitions/**/*.ts'
+    ],
+    format: 'json:' + __dirname + '/results.json',
   },
   onPrepare() {
     require('ts-node').register({
       project: 'e2e/tsconfig.e2e.json'
     });
 
-    jasmine.getEnv().addReporter(new SpecReporter({ acspec: { displayStacktrace: true } }));
   }
 };

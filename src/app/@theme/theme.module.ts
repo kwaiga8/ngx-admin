@@ -76,8 +76,8 @@ const PIPES = [
   declarations: [...COMPONENTS, ...PIPES],
 })
 export class ThemeModule {
-  static forRoot(): ModuleWithProviders<ThemeModule> {
-    return {
+  static forRoot(): ModuleWithProviders {
+    return <ModuleWithProviders>{
       ngModule: ThemeModule,
       providers: [
         ...NbThemeModule.forRoot(
