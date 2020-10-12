@@ -21,8 +21,22 @@ export class DateTimePickerSpec {
 
   @then(/^I should see calendar pop-up$/, null, 5 * 5000)
   async isDTPvisible() {
-   expect( await dateTimePickerPage.calendarHeader.isPresent()).to.be.true;
+   expect( await dateTimePickerPage.calendarHeader.isDisplayed(), `\n Ups calendar did not po up`).to.be.true;
   }
 
+  @then(/^I should see calendar with current date$/, null, 5 * 5000)
+  async isDateInCalendarVisible() {
+    const dateInDTP = await dateTimePickerPage.calendarHeaderDate.getText();
+    expect( dateInDTP, `\n Date in DTP: ${dateInDTP}`).to.be.equal(this.getFormattedTodayDate());
+  }
+
+
+  getFormattedTodayDate(): string {
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+    ];
+    const date: Date = new Date();
+    return monthNames[date.getMonth()] + ' ' + date.getDate()+ ', ' + date.getFullYear();
+  }
 
 }

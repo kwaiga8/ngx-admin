@@ -3,9 +3,11 @@ import {by, element, ElementFinder} from "protractor";
 export class DateTimePickerPage {
 
   public calendarHeader: ElementFinder;
+  public calendarHeaderDate:ElementFinder;
 
   constructor(){
-    this.calendarHeader = element(by.tagName('nb-calendar-header'))
+    this.calendarHeader = element(by.tagName('nb-calendar-header'));
+    this.calendarHeaderDate = this.calendarHeader.element(by.className('header')).element(by.className('title'));
   }
 
    getDateTimePicker(dtpName: string): ElementFinder {

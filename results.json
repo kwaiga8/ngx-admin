@@ -8,10 +8,10 @@
     "uri": "e2e\\src\\features\\date_operations.feature",
     "elements": [
       {
-        "id": "check-date-changing;make-changes-to-date",
+        "id": "check-date-changing;check-basic-date-picker-behaviour",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Make changes to date",
+        "name": "Check basic date picker behaviour",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -23,7 +23,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
@@ -36,7 +36,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2562000000
+              "duration": 2769000000
             }
           },
           {
@@ -49,20 +49,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 660000000
+              "duration": 447000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "I should see calendar pop-up",
+            "name": "I should see calendar with current date",
             "match": {
               "location": "node_modules\\cucumber-tsflow\\src\\binding-decorator.ts:201"
             },
             "result": {
               "status": "passed",
-              "duration": 265000000
+              "duration": 283000000
             }
           },
           {
