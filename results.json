@@ -1,17 +1,17 @@
 [
   {
     "keyword": "Feature",
-    "name": "Feature NAme",
+    "name": "Check date changing",
     "line": 1,
-    "id": "feature-name",
+    "id": "check-date-changing",
     "tags": [],
-    "uri": "e2e\\src\\features\\hello.feature",
+    "uri": "e2e\\src\\features\\date_operations.feature",
     "elements": [
       {
-        "id": "feature-name;meeting",
+        "id": "check-date-changing;make-changes-to-date",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Meeting",
+        "name": "Make changes to date",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -28,15 +28,41 @@
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "Given ",
             "line": 4,
-            "name": "I say hello",
+            "name": "Page is open directly on datepicker screen",
             "match": {
               "location": "node_modules\\cucumber-tsflow\\src\\binding-decorator.ts:201"
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 2562000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click in date time picker named Common Datepicker",
+            "match": {
+              "location": "node_modules\\cucumber-tsflow\\src\\binding-decorator.ts:201"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 660000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see calendar pop-up",
+            "match": {
+              "location": "node_modules\\cucumber-tsflow\\src\\binding-decorator.ts:201"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 265000000
             }
           },
           {

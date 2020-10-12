@@ -8,6 +8,9 @@ exports.config = {
   specs: [
     'e2e/src/features/*.feature',
   ],
+  exclude: [
+    'e2e/src/features/hello.feature'],
+
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {

@@ -15,7 +15,7 @@ export class NavigationSpec {
     expect(1).to.be.equal(1);
   }
 
-  @then(/^Page is open directly on datepicker screen"$/, null, 5 * 5000)
+  @then(/^Page is open directly on datepicker screen$/, null, 5 * 5000)
   async directlyShowAirport() {
     await browser.get(browser.baseUrl + '/pages/forms/datepicker');
   }
